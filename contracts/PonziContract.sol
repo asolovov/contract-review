@@ -53,7 +53,7 @@ contract PonziContract is ReentrancyGuard, Ownable {
      * We can become an Affiliate for free:
      * - We can send empty slice if `affiliatesCount` is 0
      * - We can send our own address if `affiliatesCount` is 1
-     * - We can send our own addresses if `affiliatesCount` is more than 1
+     * - We can send our own addresses if `affiliatesCount` is more than 1 or we can send our own address several times
      *
      * Also:
      * - We can use the function several times with one caller and have duplicated addresses in `affiliates_` slice

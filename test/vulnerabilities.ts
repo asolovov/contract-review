@@ -71,6 +71,9 @@ describe("Vulnerabilities PoC", function () {
 
             const value = ethers.parseEther('2');
 
+            /**
+             * We could do just [address3, address3]
+             */
             const tx3 = contract.connect(address3).joinPonzi([address3, address4], {value});
             await expect(tx3).to.changeEtherBalances(
                 [address3, address4],
@@ -144,7 +147,6 @@ describe("Vulnerabilities PoC", function () {
                 [contract, address1],
                 [ethers.parseEther('-20'), ethers.parseEther('20')]
             );
-
         });
     });
 
